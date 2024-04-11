@@ -4,6 +4,7 @@ title = "fn new<R: Read>(reader: R) -> Blog;"
 theme = "temple"
 copyright = "Copyright © (CC-BY-SA 4.0) Dom Rodriguez 2018-{year}"
 
+hasCJKLanguage = false
 enableEmoji = true
 enableRobotsTXT = true
 enableGitInfo = true
@@ -11,6 +12,25 @@ enableGitInfo = true
 disablePathToLower = false
 relativeURLs = true
 uglyURLs = false
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+pluralizeListTitles = false
+
+summaryLength = 42
+
+footnoteReturnLinkContents = "↩"
+
+# URL structure
+[permalinks]
+    categories = "/categories/:slug/"
+    tags = "/tags/:slug/"
+
+# Modified date
+[frontmatter]
+    lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
+
 
 [params]
   # Enables syntax highlighting
@@ -24,7 +44,20 @@ uglyURLs = false
   category = "categories"
 
 [author]
+# Author’s information
+[author]
   name = "Dom Rodriguez (shymega)"
   github = "shymega"
   email = "shymega@shymega.org.uk"
   twitter = "shymega_"
+  website = "https://dom.rodriguez.org.uk"
+  motto = "All opinions expressed are my own views and in no way representative of my employer"
+
+# MIME type of Atom
+[mediaTypes."application/atom+xml"]
+    suffixes = ["xml"]
+
+# Maximum number of items in the Atom & RSS feed
+[services.rss]
+    limit = 10
+
